@@ -1,6 +1,10 @@
 qtbase-opensource-src (5.2.0+dfsg-7~bpo0) UNRELEASED; urgency=medium
 
+  [ Debian Qt/KDE Maintainers ]
   * Backports upload.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Use embedded harfbuzz lib.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 14 Feb 2014 16:07:59 -0300
 
