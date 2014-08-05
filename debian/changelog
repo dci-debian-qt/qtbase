@@ -1,3 +1,173 @@
+qtbase-opensource-src (5.3.1+dfsg-3) unstable; urgency=medium
+
+  * Improve NEWS wording.
+  * Add cmake_dont_check_existence_of_gl_filesin_qt5gui.patch to avoid Qt GUI
+    requiring libegl1-mesa-dev (Closes: #752847).
+  * Update symbols files with buildds' and mips64el's logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 04 Jul 2014 23:35:18 -0300
+
+qtbase-opensource-src (5.3.1+dfsg-2) unstable; urgency=medium
+
+  * Enable using system network proxies by default.
+    - Add NEWS file with this information.
+  * Make qtbase5-dev suggest libegl1-mesa-dev and libgl1-mesa-dev, as they
+    might be needed by those using EGL.
+  * Bump qtbase-abi to 5-3-1. Sune found that there is a runtime check that
+    forces us to do a transition for private symbols even on point releases
+    without symbols changes (Closes: #752889).
+  * Update symbols files with buildds' and mips64el's logs.
+  * Add multitouch protocol translation support.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Fri, 27 Jun 2014 19:52:42 -0300
+
+qtbase-opensource-src (5.3.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols files with buildds' and current logs.
+  * Clear the list of archs that should not use pre compiled headers. We've
+    been told that with GCC 4.9 this should not be necessary anymore.
+  * Remove link to a favicon in a dead url, part of an example.
+    The Trolltech site is down and so there is no possible privacy breach in
+    it, so just removing the link should suffice.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 26 Jun 2014 00:31:45 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-5) unstable; urgency=medium
+
+  * Remove enable_sparc_detection.patch. This is causing a FTBFS in sparc now.
+    I've contacted upstream to know the best way to go from here, in the
+    meantime we just don't detect it.
+  * Update symbols files with buildds' and current logs.
+  * Install only the last (and more relevant) changelog. We were trying (and
+    failing) to install all of them, but only the first one would end up as
+    changelog. As the listing order varies between archs, the final changelog
+    will also be different between them, thus not allowing the package to be
+    really Multi-Arch: same. Thanks Jakub Wilk for the bug report.
+    (Closes: #750730).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 07 Jun 2014 18:29:34 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-4) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 05 Jun 2014 13:02:04 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-3) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Search for private symbols at build time and produce a diff so as to be
+    able to get the changes from build logs.
+    - Modify mark_private_symbols.sh.
+    - Run mark_private_symbols.sh from debian/rules.
+  * Do not override dh_builddeb: xz compression is now the default method.
+  * Backport Remove-Wcast-align-from-QMAKE_CXXFLAGS.patch. This totally
+    disables -Wcast-align (Closes: #744311).
+    - Remove do_not_pass_wcast-align_on_sparc.patch, it s now not needed
+      anymore.
+  * Update symbols files with buildds' logs.
+
+  [ Peter Michael Green ]
+  * arm64 changes cherry picked from ubuntu (Closes: #750047).
+    + Add arm64 to list of 64-bit architectures that should not use -m64
+  * Remove .device.vars and .qmake.vars in clean target.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 02 Jun 2014 14:21:16 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-2) experimental; urgency=medium
+
+  * Add revert_upstream_bsymbolic_change.patch by Timo Jyrinki which reenables
+    -Bsymbolic-functions on non-x86 since Debian has a recent enough binutils.
+  * Mark private symbols as such.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 20 May 2014 16:20:35 -0300
+
+qtbase-opensource-src (5.3.0+dfsg-1) experimental; urgency=medium
+
+  [ Timo Jyrinki ]
+  * Make qt5-qmake Multi-Arch: same since it moved from shipping files in
+    /usr/share to /usr/lib/<triplet>.
+
+  [ Dmitry Shachnev ]
+  * Build-depend on libxkbcommon-x11-dev, as the new patch includes
+    <xkbcommon/xkbcommon-x11.h>.
+  * Add arm64 to no_pch_architectures.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream release.
+    - Fixes CVE-2014-0190.
+  * Install the headers in a Multi-Arch qualified directory (Closes: #734677).
+    - Fix related install files.
+    - Mark qtbase5-dev, qtbase5-private-dev and libqt5opengl5-dev
+      as Multi-Arch: same.
+  * Override Lintian warning about torrent.qdoc being under an RFC license,
+    it's just a false positive coming from the fact that the documentation is
+    listing the license, but it's really not licensed under the RFC license.
+  * Update symbols files with buildds' and current logs.
+  * Refresh patches:
+    - hurd_opengl_incldir.diff
+    - support_mips_atomic_on_pre-mips32_archs.patch
+    - qatomic_mips.h
+    - enable_sparc_detection.patch
+  * Remove patches:
+    - fix_power_atomic_code.patch, the code it patches has been removed.
+    - enable_s390_detection.patch, applied upstream.
+    - change_sparc_qatomic.patch, the code it patches has been removed.
+  * Adjust install files.
+  * Bump qtbase-abi to qtbase-abi-5-3-0 due to private symbols changes.
+  * Make qtbase5-dev-tools-dbg Multi-Arch: same due to qt5-qmake also becoming
+    Multi-Arch: same.
+  * Add a lintian override for qtbase5-examples: there is no possibility of
+    privacy breach in the way trolltech_com.html is used, as it is just parsed,
+    but not rendered nor any of the things it points at it's retrieved.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 20 May 2014 14:00:38 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-3) unstable; urgency=medium
+
+  * Release to unstable.
+  * Add license to mark_private_symbols.sh and corresponding entry in
+    debian/copyright.
+  * Remove linux_no_perf.diff used to disable perf events on Linux/IA64. We no
+    longer have IA64 around.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 24 Mar 2014 20:05:31 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-2) experimental; urgency=medium
+
+  [ Pino Toscano ]
+  * Disable eglfs on any non-Linux architecture; while the dependencies
+    for it might be satisfied, the code seems tied to/requiring Linux stuff.
+
+  [ Dmitry Shachnev ]
+  * Update remove_google_adsense.patch to also remove ProspectXtractor tracker
+    script.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Update symbols files with buildd's logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 24 Feb 2014 12:10:37 -0300
+
+qtbase-opensource-src (5.2.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Remove sha3_64bit_BE.diff, uname_include.diff and
+    fix_crash_stale_pointer_dereferencing.patch, applied upstream.
+  * Update symbols files with buildd's logs.
+  * Do not install any CMake file for any plugin.
+  * The egl/kms plugins have been built on amd64 too. Move them to the linux
+    install files and see what happens with other archs.
+  * Remove private headers no longer installed.
+  * QtCore's QNoImplicitBoolCast header is no longer installed. It only had an
+    include to qtglobal.h in it and no public symbols are missing.
+  * Update symbols files with current build log. All missing symbols where
+    private. Private symbols where [re]marked in symbols files.
+  * Bump qtbase-abi to qtbase-abi-5-2-1 due to private symbols changes.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 08 Feb 2014 11:21:04 -0300
+
 qtbase-opensource-src (5.2.0+dfsg-7~bpo0) UNRELEASED; urgency=medium
 
   [ Debian Qt/KDE Maintainers ]

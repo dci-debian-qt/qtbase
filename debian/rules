@@ -16,7 +16,7 @@ export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 # Library package list for override_dh_makeshlibs, excludes -dev -dbg
 pkgs_lib := $(filter-out %-dev %-dbg,$(filter lib%,$(shell dh_listpackages)))
 # Upstream changelog
-upstream_changes := $(wildcard dist/changes-*)
+upstream_changes := dist/changes-$(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | cut -f1 -d '-' | sed -e 's/+dfsg//')
 # Current debian version (e.g.: 4:4.5.2-1)
 current_version := $(shell dpkg-parsechangelog | sed -n 's/^Version: //p')
 # Specific shlibs version (e.g.: 4:4.5.2)
@@ -48,7 +48,7 @@ else
 	extra_configure_opts += -no-sql-ibase
 endif
 
-no_pch_architectures := armel armhf ia64
+no_pch_architectures := none
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(no_pch_architectures)))
 	extra_configure_opts += -no-pch
 endif
@@ -60,8 +60,12 @@ else
 	extra_configure_opts += -opengl desktop
 endif
 
+ifneq ($(DEB_HOST_ARCH_OS),linux)
+	extra_configure_opts += -no-eglfs
+endif
+
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-  ifneq (,$(filter $(DEB_HOST_ARCH),alpha ia64 mips64 mips64el))
+  ifneq (,$(filter $(DEB_HOST_ARCH),alpha ia64 mips64 mips64el arm64))
 	platform_arg = linux-g++
   else ifeq ($(DEB_HOST_ARCH_BITS),64)
 	platform_arg = linux-g++-64
@@ -85,7 +89,7 @@ override_dh_auto_configure:
 	            -bindir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/bin" \
 	            -libdir "/usr/lib/$(DEB_HOST_MULTIARCH)" \
 	            -docdir "/usr/share/qt5/doc" \
-	            -headerdir "/usr/include/qt5" \
+	            -headerdir "/usr/include/$(DEB_HOST_MULTIARCH)/qt5" \
 	            -datadir "/usr/share/qt5" \
 	            -archdatadir "/usr/lib/$(DEB_HOST_MULTIARCH)/qt5" \
 	            -hostdatadir "/usr/share/qt5" \
@@ -107,6 +111,7 @@ override_dh_auto_configure:
 	            -system-zlib \
 	            -system-libpng \
 	            -system-libjpeg \
+	            -system-proxies \
 	            -openssl \
 	            -no-rpath \
 	            -verbose \
@@ -193,6 +198,9 @@ override_dh_auto_clean:
 	rm -f debian/shlibs.local
 	rm -f debian/stamp-makefile-build-tools
 
+	# more leftovers
+	rm -f .device.vars .qmake.vars
+
 ifeq ($(vendor),Ubuntu)
 	rm -rf po
 endif
@@ -233,9 +241,9 @@ override_dh_auto_install-arch:
 	# Remove libtool-like files
 	rm -f debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 
-	# A user of Qt built by a distro doesn't need to find where the SQL plugins
+	# A user of Qt built by a distro doesn't need to find where the plugins
 	# are via CMake, so don't install them.
-	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt5Sql/Qt5Sql_Q*DriverPlugin.cmake
+	rm -fv debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt5*/Q*Plugin.cmake
 
 	# Remove bogus exec bits from some data files in mkspecs, docs, examples
 	find debian/tmp/usr/share/qt5/ debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/ \
@@ -286,8 +294,8 @@ override_dh_makeshlibs:
 		fi \
 	done
 
-override_dh_builddeb:
-	dh_builddeb -- -Zxz
+	# Check for private symbols not marked as such. Be verbose.
+	DEBUG=1 debian/mark_private_symbols.sh
 
 override_dh_clean:
 	dh_clean

@@ -1,16 +1,11 @@
-sha3_64bit_BE.diff
-linux_no_perf.diff
+remove_icon_from_example.patch
 hurd_opengl_incldir.diff
-fix_power_atomic_code.patch
 support_mips_atomic_on_pre-mips32_archs.patch
-uname_include.diff
 mips_more_pre-mips32.diff
 gnukfreebsd.diff
-enable_s390_detection.patch
-enable_sparc_detection.patch
-do_not_pass_wcast-align_on_sparc.patch
-fix_crash_stale_pointer_dereferencing.patch
+Remove-Wcast-align-from-QMAKE_CXXFLAGS.patch
+cmake_dont_check_existence_of_gl_filesin_qt5gui.patch
 
 # Debian specific.
-change_sparc_qatomic.patch
 remove_google_adsense.patch
+revert_upstream_bsymbolic_change.patch
