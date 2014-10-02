@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.3.1 sparc
+# SymbolsHelper-Confirmed: 5.3.2 amd64
 libQt5DBus.so.5 libqt5dbus5 #MINVER#
 | libqt5dbus5 #MINVER#, qtbase-abi-5-3-2
  _Z14qDBusReplyFillRK12QDBusMessageR10QDBusErrorR8QVariant@Base 5.0.2
@@ -18,6 +18,8 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN10QDBusErrorC2ERK12QDBusMessage@Base 5.0.2
  _ZN10QDBusErrorC2ERKS_@Base 5.0.2
  _ZN10QDBusErrorC2Ev@Base 5.0.2
+ (optional=gccinternal)_ZN10QDBusErrorD1Ev@Base 5.3.2
+ (optional=gccinternal)_ZN10QDBusErrorD2Ev@Base 5.3.2
  _ZN10QDBusErroraSERK12QDBusMessage@Base 5.0.2
  _ZN10QDBusErroraSERKS_@Base 5.0.2
  _ZN11QDBusServer11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
@@ -32,6 +34,7 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN11QDBusServerD0Ev@Base 5.0.2
  _ZN11QDBusServerD1Ev@Base 5.0.2
  _ZN11QDBusServerD2Ev@Base 5.0.2
+ (optional=templinst)_ZN11QMetaMethod10fromSignalIM7QObjectFvPS1_EEES_T_@Base 5.3.2
  _ZN12QDBusContextC1Ev@Base 5.0.2
  _ZN12QDBusContextC2Ev@Base 5.0.2
  _ZN12QDBusContextD1Ev@Base 5.0.2
@@ -255,6 +258,7 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN26QDBusAbstractInterfaceBaseD0Ev@Base 5.0.2
  _ZN26QDBusAbstractInterfaceBaseD1Ev@Base 5.0.2
  _ZN26QDBusAbstractInterfaceBaseD2Ev@Base 5.0.2
+ (optional=gccinternal)_ZN7QString5clearEv@Base 5.3.2
  (optional=templinst|arch=ia64)_ZN8QVariant9fromValueI14QDBusSlotCacheEES_RKT_@Base 5.0.2
  _ZN9QDBusUtil14isValidBusNameERK7QString@Base 5.0.2
  _ZN9QDBusUtil16argumentToStringERK8QVariant@Base 5.0.2

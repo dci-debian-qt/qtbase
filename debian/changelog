@@ -4,6 +4,7 @@ qtbase-opensource-src (5.3.2+dfsg-3~bpo70+1) UNRELEASED; urgency=medium
   * Use embedded harfbuzz lib. Backport requested in #750427.
   * Use embedded libxkbcommon-x11. Backport requested in #757174.
   * The KMS plugin is not built in Wheezy, remove it from the install file.
+  * Update symbols files with current build log.
 
  -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 05 Aug 2014 20:52:08 -0300
 

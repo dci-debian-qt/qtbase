@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.3.1 amd64 sparc
+# SymbolsHelper-Confirmed: 5.3.2 amd64
 libQt5Network.so.5 libqt5network5 #MINVER#
 | libqt5network5 #MINVER#, qtbase-abi-5-3-2
  _Z19qt_qhostinfo_lookupRK7QStringP7QObjectPKcPbPi@Base 5.0.2
@@ -776,6 +776,7 @@ libQt5Network.so.5 libqt5network5 #MINVER#
  _ZN9QSslErrorD1Ev@Base 5.0.2
  _ZN9QSslErrorD2Ev@Base 5.0.2
  _ZN9QSslErroraSERKS_@Base 5.0.2
+ (optional=gccinternal)_ZNK10QByteArray8containsEPKc@Base 5.3.2
  _ZNK10QDnsLookup10isFinishedEv@Base 5.0.2
  _ZNK10QDnsLookup10metaObjectEv@Base 5.0.2
  _ZNK10QDnsLookup10nameserverEv@Base 5.3.0

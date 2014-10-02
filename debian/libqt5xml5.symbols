@@ -1,6 +1,7 @@
-# SymbolsHelper-Confirmed: 5.2.1 sparc
+# SymbolsHelper-Confirmed: 5.3.2 amd64
 libQt5Xml.so.5 libqt5xml5 #MINVER#
 | libqt5xml5 #MINVER#, qtbase-abi-5-3-2
+ (optional=gccinternal)_ZN10QByteArray4dataEv@Base 5.3.2
  _ZN10QDomEntityC1EP17QDomEntityPrivate@Base 5.0.2
  _ZN10QDomEntityC1ERKS_@Base 5.0.2
  _ZN10QDomEntityC1Ev@Base 5.0.2
@@ -96,6 +97,10 @@ libQt5Xml.so.5 libqt5xml5 #MINVER#
  _ZN12QDomNotationaSERKS_@Base 5.0.2
  _ZN14QXmlAttributes5clearEv@Base 5.0.2
  _ZN14QXmlAttributes6appendERK7QStringS2_S2_S2_@Base 5.0.2
+ (optional=gccinternal)_ZN14QXmlAttributes9AttributeC1ERKS0_@Base 5.3.2
+ (optional=gccinternal)_ZN14QXmlAttributes9AttributeC2ERKS0_@Base 5.3.2
+ (optional=gccinternal)_ZN14QXmlAttributes9AttributeD1Ev@Base 5.3.2
+ (optional=gccinternal)_ZN14QXmlAttributes9AttributeD2Ev@Base 5.3.2
  _ZN14QXmlAttributesC1Ev@Base 5.1.0
  _ZN14QXmlAttributesC2Ev@Base 5.1.0
  _ZN14QXmlAttributesD0Ev@Base 5.1.0
@@ -256,6 +261,7 @@ libQt5Xml.so.5 libqt5xml5 #MINVER#
  _ZN25QDomProcessingInstructionC2ERKS_@Base 5.0.2
  _ZN25QDomProcessingInstructionC2Ev@Base 5.0.2
  _ZN25QDomProcessingInstructionaSERKS_@Base 5.0.2
+ (optional=gccinternal)_ZN7QString5clearEv@Base 5.3.2
  _ZN8QDomAttr8setValueERK7QString@Base 5.0.2
  _ZN8QDomAttrC1EP15QDomAttrPrivate@Base 5.0.2
  _ZN8QDomAttrC1ERKS_@Base 5.0.2
