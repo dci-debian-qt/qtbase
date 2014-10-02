@@ -7,6 +7,7 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_BITS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_BITS)
+DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
 export PATH := $(PATH):$(shell pwd)/bin
 export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
@@ -48,7 +49,7 @@ else
 	extra_configure_opts += -no-sql-ibase
 endif
 
-no_pch_architectures := none
+no_pch_architectures := arm64
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(no_pch_architectures)))
 	extra_configure_opts += -no-pch
 endif
@@ -62,6 +63,13 @@ endif
 
 ifneq ($(DEB_HOST_ARCH_OS),linux)
 	extra_configure_opts += -no-eglfs
+endif
+
+# Compile without sse2 support on i386
+# Do not use pre compiled headers in order to be able to rebuild the gui
+# submodule.
+ifeq ($(DEB_HOST_ARCH_CPU),i386)
+	cpu_opt = -no-sse2 -no-pch
 endif
 
 ifeq ($(DEB_HOST_ARCH_OS),linux)
@@ -111,7 +119,6 @@ override_dh_auto_configure:
 	            -system-zlib \
 	            -system-libpng \
 	            -system-libjpeg \
-	            -system-proxies \
 	            -openssl \
 	            -no-rpath \
 	            -verbose \
@@ -127,7 +134,8 @@ override_dh_auto_configure:
 	            -accessibility \
 	            -compile-examples \
 	            -no-directfb \
-	            $(extra_configure_opts)
+	            $(extra_configure_opts) \
+	            $(cpu_opt)
 
 override_dh_auto_clean:
 	[ ! -f Makefile ] || $(MAKE) confclean distclean
@@ -213,6 +221,20 @@ override_dh_auto_build-indep:
 
 override_dh_auto_install-arch:
 	dh_auto_install -Smakefile -- INSTALL_ROOT=$(CURDIR)/debian/tmp/
+
+ifeq ($(DEB_HOST_ARCH_CPU),i386)
+	# Rebuild the necessary libs with SSE2 support.
+	# Create the destination directory.
+	install -d debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/sse2/
+
+	# corelib needs make clean first to be able to rebuild.
+	cd $(CURDIR)/src/corelib; make clean ; ../../bin/qmake -config sse2; make
+	cp -av lib/libQt5Core.so.* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/sse2/
+
+	# gui on turn doesn't needs it, and actually fails if done.
+	cd $(CURDIR)/src/gui; ../../bin/qmake -config sse2; make
+	cp -av lib/libQt5Gui.so.* debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/sse2/
+endif
 
 	# Fix wrong path in pkgconfig files
 	find $(CURDIR)/debian/tmp/usr/lib/*/pkgconfig -type f -name '*.pc' \

@@ -1,3 +1,73 @@
+qtbase-opensource-src (5.3.2+dfsg-3) unstable; urgency=medium
+
+  * Do not use precompiled headers on arm64 (Closes: #762702).
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 30 Sep 2014 00:38:45 -0300
+
+qtbase-opensource-src (5.3.2+dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Add Adam Majer's fix_sparc_atomics.patch to let Sparc use C++11's atomics.
+  * Add libxext-dev as build dependency: it's currently being pulled by
+    something else, but adding it here will make things more robust.
+  * Make qtbase5-dev depend on libxext-dev. Some mkspecs require it and it
+    seems it's not a false positive.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 21 Sep 2014 22:40:08 -0300
+
+qtbase-opensource-src (5.3.2+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Update my e-mail address.
+  * Update Vcs-Browser field to point to cgit interface.
+  * Use correct exception syntax in debian/copyright.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * New upstream release.
+  * Remove patches applied upstream:
+    - support_mips_atomic_on_pre-mips32_archs.patch, applied upstream with a
+      fix.
+    - Remove-Wcast-align-from-QMAKE_CXXFLAGS.patch.
+    - cmake_dont_check_existence_of_gl_filesin_qt5gui.patch.
+  * Refresh patches.
+  * Bump qtbase-abi to 5-3-2.
+  * Remove libgstreamer* build dependencies, they are not really needed as
+    there is no usage of them by grepping the code.
+  * Update install files.
+  * Update symbols files with buildds' and current logs.
+  * Build conflict against libmariadbclient-dev until the fix for #759309
+    enters unstable.
+  * Mark private symbols as such.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 16 Sep 2014 13:38:11 -0300
+
+qtbase-opensource-src (5.3.1+dfsg-6) unstable; urgency=medium
+
+  * Release to unstable.
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 02 Sep 2014 18:10:57 -0300
+
+qtbase-opensource-src (5.3.1+dfsg-5) experimental; urgency=medium
+
+  [ Julián Moreno Patiño ]
+  * Add support for non-sse2 processors (Closes: #754894).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Disable the usage of system proxies by default due to
+    https://bugreports.qt-project.org/browse/QTBUG-41053
+  * Make libqt5core5a recommend qttranslations5-l10n. Thanks Felix Geyer
+    for the pointer.
+  * Build SSE2 enabled libraries in override_dh_auto_install-arch in order to
+    avoid rewriting the previously built versions before installing them.
+  * Disable pre compiled headers support when building both non SEE2 and SSE2
+    libraries, as it is not compatible.
+  * Create new install files for archs which uses i386 processor.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 01 Sep 2014 18:53:46 -0300
+
 qtbase-opensource-src (5.3.1+dfsg-3~bpo70+2) UNRELEASED; urgency=medium
 
   [ Lisandro Damián Nicanor Pérez Meyer ]
