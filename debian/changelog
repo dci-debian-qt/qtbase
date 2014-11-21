@@ -1,3 +1,12 @@
+qtbase-opensource-src (5.3.2+dfsg-4) unstable; urgency=medium
+
+  * Move QPlatformSupport stuff from qtbase5-dev to qtbase5-private-dev, as it
+    belongs there. Update Breaks+Replaces.
+  * Backport fix_bug_in_internal_comparison_operator.patch to fix a UTF-8
+    problem on QJson (Closes: #764452).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 08 Oct 2014 18:28:23 -0300
+
 qtbase-opensource-src (5.3.2+dfsg-3~bpo70+1) wheezy-backports; urgency=medium
 
   * Upload to wheezy-backports.
