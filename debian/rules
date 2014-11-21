@@ -129,6 +129,7 @@ override_dh_auto_configure:
 	            -no-separate-debug-info \
 	            -qpa xcb \
 	            -xcb \
+	            -xkb-config-root "/usr/share/X11/xkb" \
 	            -glib \
 	            -icu \
 	            -accessibility \
