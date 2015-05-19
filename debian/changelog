@@ -1,3 +1,12 @@
+qtbase-opensource-src (5.3.2+dfsg-4+deb8u1) stable-proposed-updates; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Fix several DoS vulnerabilities in the image handlers.
+    - CVE-2015-0295, CVE-2015-1858, CVE-2015-1859, CVE-2015-1860.
+    - Closes: #779580.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 19 May 2015 13:56:37 -0300
+
 qtbase-opensource-src (5.3.2+dfsg-4~bpo70+1) wheezy-backports; urgency=medium
 
   * Set xkb-config-root as we are currently not using libxkbcommon because it
