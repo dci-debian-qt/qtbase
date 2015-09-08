@@ -1,6 +1,6 @@
 # Backported stuff
 Add-environment-variable-support-for-testability-lib.patch
-Fix-compile-error-on-big-endian.patch
+#Fix-compile-error-on-big-endian.patch
 
 # Debian specific.
 gnukfreebsd.diff
