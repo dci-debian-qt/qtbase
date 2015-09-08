@@ -3,7 +3,7 @@ Add-environment-variable-support-for-testability-lib.patch
 #Fix-compile-error-on-big-endian.patch
 
 # Debian specific.
-gnukfreebsd.diff
+# gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 hurd-forkfd.diff
