@@ -24,3 +24,6 @@ gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
+
+# Plasma mobile
+plasma-mobile_qopenglvertexarrayobject.diff
