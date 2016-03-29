@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.5.1+dfsg-17) wily; urgency=medium
+
+  * Fake entry because we had a bogus -17 upload. This should conflict
+    with the actual entry upon git merge and can be dropped.
+
+ -- Harald Sitter <sitter@kde.org>  Tue, 29 Mar 2016 14:08:03 +0200
+
 qtbase-opensource-src (5.5.1+dfsg-16) unstable; urgency=medium
 
   * Add fix_alsa_detection.patch to workaround ALSA >= 1.1.0 detection.
