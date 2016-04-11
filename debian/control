@@ -52,6 +52,7 @@ Build-Depends: debhelper (>= 9),
                libxcb-shm0-dev,
                libxcb-sync-dev,
                libxcb-xfixes0-dev,
+               libxcb-xinerama0-dev,
                libxcb-xkb-dev,
                libxcb1-dev,
                libxext-dev,
@@ -63,6 +64,8 @@ Build-Depends: debhelper (>= 9),
                publicsuffix,
                unixodbc-dev,
                zlib1g-dev
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.6.0~),
+                     qttools5-dev-tools (>= 5.6.0~)
 Build-Conflicts: libmariadbclient-dev
 Standards-Version: 3.9.7
 Homepage: http://qt-project.org/
@@ -73,7 +76,7 @@ Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-5-1
+Provides: qtbase-abi-5-6-0
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0
@@ -89,12 +92,12 @@ Package: libqt5gui5
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
+Depends: fontconfig, mesa-utils, ${misc:Depends}, ${shlibs:Depends}
 Recommends: libqt5svg5
-Breaks: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
-        libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
-Replaces: libqt5egldeviceintegration5 (<< 5.5.1+dfsg-13~),
-          libqt5xcbqpa5 (<< 5.5.1+dfsg-13~)
+Breaks: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
+        libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
+Replaces: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
+          libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
 Suggests: libqt5libqgtk2, qt5-image-formats-plugins, qtwayland5
 Description: Qt 5 GUI module
  Qt is a cross-platform C++ application framework. Qt's primary feature
@@ -383,7 +386,7 @@ Description: Qt 5 base development programs
  is its rich set of widgets that provide standard GUI functionality.
  .
  This package contains the development programs used for building Qt 5
- applications, such as moc, qdbuscpp2xml, qdbusxml2cpp, qdoc, rcc,
+ applications, such as moc, qdbuscpp2xml, qdbusxml2cpp, rcc,
  syncqt and uic.
 
 Package: qt5-qmake
@@ -473,6 +476,17 @@ Description: Qt 5 development defaults package
  This package should not be used for building Debian packages. Take a
  look at http://pkg-kde.alioth.debian.org/packagingqtbasedstuff.html for
  more information.
+
+Package: qtbase5-doc
+Priority: extra
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Qt 5 base documentation
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ This package contains the documentation for the Qt 5 base libraries.
 
 Package: qtbase5-doc-html
 Priority: extra
