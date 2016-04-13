@@ -3,6 +3,9 @@ dbusmenu_fixes.diff
 dbustray_fixes.diff
 no_dbus_dependency.diff
 fix_not_delivering_focus.patch
+0001-Fix-QtDBus-deadlock-inside-kded-kiod.patch
+0001-QtDBus-clean-up-signal-hooks-and-object-tree-in-clos.patch
+0001-QtDBus-finish-all-pending-call-with-error-if-disconn.patch
 
 # Debian specific.
 gnukfreebsd.diff
