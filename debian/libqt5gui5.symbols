@@ -534,6 +534,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QSimpleDrag9startDragEv@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QSimpleDragC1Ev@Qt_5_PRIVATE_API 5.1.0 1
  _ZN11QSimpleDragC2Ev@Qt_5_PRIVATE_API 5.1.0 1
+ (arch=amd64)_ZN11QSimpleDragD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN11QSimpleDragD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN11QSimpleDragD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN11QStaticText12setTextWidthEd@Qt_5 5.2.0
  _ZN11QStaticText13setTextFormatEN2Qt10TextFormatE@Qt_5 5.0.2
  _ZN11QStaticText13setTextOptionERK11QTextOption@Qt_5 5.0.2
@@ -575,6 +578,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN11QStyleHints31mouseDoubleClickIntervalChangedEi@Qt_5 5.5.0
  _ZN11QStyleHintsC1Ev@Qt_5 5.0.2
  _ZN11QStyleHintsC2Ev@Qt_5 5.0.2
+ (arch=amd64)_ZN11QStyleHintsD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN11QStyleHintsD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN11QStyleHintsD2Ev@Qt_5 5.6.1
  _ZN11QTextCursor10createListEN15QTextListFormat5StyleE@Qt_5 5.0.2
  _ZN11QTextCursor10createListERK15QTextListFormat@Qt_5 5.0.2
  _ZN11QTextCursor10deleteCharEv@Qt_5 5.0.2
@@ -1219,6 +1225,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN13QRasterWindow16staticMetaObjectE@Qt_5 5.4.0
  _ZN13QRasterWindowC1EP7QWindow@Qt_5 5.4.0
  _ZN13QRasterWindowC2EP7QWindow@Qt_5 5.4.0
+ (arch=amd64)_ZN13QRasterWindowD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN13QRasterWindowD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN13QRasterWindowD2Ev@Qt_5 5.6.1
  _ZN13QStandardItem10insertRowsEiRK5QListIPS_E@Qt_5 5.0.2
  _ZN13QStandardItem10insertRowsEii@Qt_5 5.0.2
  _ZN13QStandardItem10removeRowsEii@Qt_5 5.0.2
@@ -1827,6 +1836,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN16QAccessibleCache15objectDestroyedEP7QObject@Qt_5_PRIVATE_API 5.3.0 1
  _ZN16QAccessibleCache16staticMetaObjectE@Qt_5_PRIVATE_API 5.3.0 1
  _ZN16QAccessibleCache8instanceEv@Qt_5_PRIVATE_API 5.3.0 1
+ (arch=amd64)_ZN16QAccessibleCacheD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN16QAccessibleCacheD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN16QAccessibleCacheD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN16QAccessibleEventD0Ev@Qt_5 5.6.0~beta
  _ZN16QAccessibleEventD1Ev@Qt_5 5.6.0~beta
  _ZN16QAccessibleEventD2Ev@Qt_5 5.6.0~beta
@@ -2108,6 +2120,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN17QTextImageHandler5imageEP13QTextDocumentRK16QTextImageFormat@Qt_5_PRIVATE_API 5.0.2 1
  _ZN17QTextImageHandlerC1EP7QObject@Qt_5_PRIVATE_API 5.0.2 1
  _ZN17QTextImageHandlerC2EP7QObject@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN17QTextImageHandlerD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN17QTextImageHandlerD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN17QTextImageHandlerD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN17QTextInlineObject10setDescentEd@Qt_5 5.2.0
  _ZN17QTextInlineObject8setWidthEd@Qt_5 5.2.0
  _ZN17QTextInlineObject9setAscentEd@Qt_5 5.2.0
@@ -2214,6 +2229,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN18QPaintDeviceWindow6updateEv@Qt_5 5.4.0
  _ZN18QPaintDeviceWindowC1ER25QPaintDeviceWindowPrivateP7QWindow@Qt_5_PRIVATE_API 5.4.0 1
  _ZN18QPaintDeviceWindowC2ER25QPaintDeviceWindowPrivateP7QWindow@Qt_5_PRIVATE_API 5.4.0 1
+ (arch=amd64)_ZN18QPaintDeviceWindowD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN18QPaintDeviceWindowD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN18QPaintDeviceWindowD2Ev@Qt_5 5.6.1
  _ZN18QPlatformClipboard11emitChangedEN10QClipboard4ModeE@Qt_5 5.0.2
  _ZN18QPlatformClipboard11setMimeDataEP9QMimeDataN10QClipboard4ModeE@Qt_5 5.0.2
  _ZN18QPlatformClipboard8mimeDataEN10QClipboard4ModeE@Qt_5 5.0.2
@@ -2395,6 +2413,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QBlitterPaintEngine9drawRectsEPK6QRectFi@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QBlitterPaintEngineC1EP24QBlittablePlatformPixmap@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QBlitterPaintEngineC2EP24QBlittablePlatformPixmap@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN19QBlitterPaintEngineD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QBlitterPaintEngineD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QBlitterPaintEngineD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN19QColorDialogOptions10setOptionsE6QFlagsINS_17ColorDialogOptionEE@Qt_5 5.0.2
  _ZN19QColorDialogOptions11customColorEi@Qt_5 5.0.2
  _ZN19QColorDialogOptions12customColorsEv@Qt_5 5.0.2
@@ -2421,9 +2442,15 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QInputDeviceManager29cursorPositionChangeRequestedERK6QPoint@Qt_5_PRIVATE_API 5.5.0 1
  _ZN19QInputDeviceManagerC1EP7QObject@Qt_5_PRIVATE_API 5.5.0 1
  _ZN19QInputDeviceManagerC2EP7QObject@Qt_5_PRIVATE_API 5.5.0 1
+ (arch=amd64)_ZN19QInputDeviceManagerD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QInputDeviceManagerD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QInputDeviceManagerD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN19QKeySequencePrivate7keyNameEiN12QKeySequence14SequenceFormatE@Qt_5 5.6.1
  _ZN19QNativeGestureEventC1EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0~beta1
  _ZN19QNativeGestureEventC2EN2Qt17NativeGestureTypeERK7QPointFS4_S4_dmy@Qt_5 5.2.0~beta1
+ (arch=amd64)_ZN19QNativeGestureEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN19QNativeGestureEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN19QNativeGestureEventD2Ev@Qt_5 5.6.1
  _ZN19QOpenGLContextGroup11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN19QOpenGLContextGroup11qt_metacastEPKc@Qt_5 5.0.2
  _ZN19QOpenGLContextGroup16staticMetaObjectE@Qt_5 5.0.2
@@ -2500,6 +2527,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN19QTextDocumentLayout8doLayoutEiii@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayoutC1EP13QTextDocument@Qt_5_PRIVATE_API 5.0.2 1
  _ZN19QTextDocumentLayoutC2EP13QTextDocument@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN19QTextDocumentLayoutD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QTextDocumentLayoutD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN19QTextDocumentLayoutD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN19QTextDocumentWriter11setFileNameERK7QString@Qt_5 5.0.2
  _ZN19QTextDocumentWriter24supportedDocumentFormatsEv@Qt_5 5.0.2
  _ZN19QTextDocumentWriter5writeEPK13QTextDocument@Qt_5 5.0.2
@@ -3025,6 +3055,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN21QTriangulatingStroker9arcPointsEffffffR15QVarLengthArrayIfLi256EE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QAccessibleApplicationC1Ev@Qt_5 5.0.2
  _ZN22QAccessibleApplicationC2Ev@Qt_5 5.0.2
+ (arch=amd64)_ZN22QAccessibleApplicationD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN22QAccessibleApplicationD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN22QAccessibleApplicationD2Ev@Qt_5 5.6.1
  _ZN22QDashedStrokeProcessor7processERK11QVectorPathRK4QPenRK6QRectF6QFlagsIN8QPainter10RenderHintEE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QDashedStrokeProcessorC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QDashedStrokeProcessorC2Ev@Qt_5_PRIVATE_API 5.0.2 1
@@ -3400,6 +3433,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN24QPlatformNativeInterface32nativeResourceFunctionForContextERK10QByteArray@Qt_5 5.0.2
  _ZN24QPlatformNativeInterface36nativeResourceFunctionForIntegrationERK10QByteArray@Qt_5 5.0.2
  _ZN24QPlatformNativeInterface37nativeResourceFunctionForBackingStoreERK10QByteArray@Qt_5 5.0.2
+ (arch=amd64)_ZN24QPlatformNativeInterfaceD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN24QPlatformNativeInterfaceD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN24QPlatformNativeInterfaceD2Ev@Qt_5 5.6.1
  _ZN24QSupportedWritingSystems12setSupportedEN13QFontDatabase13WritingSystemEb@Qt_5 5.0.2
  _ZN24QSupportedWritingSystems6detachEv@Qt_5 5.0.2
  _ZN24QSupportedWritingSystemsC1ERKS_@Qt_5 5.0.2
@@ -3487,6 +3523,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN25QOpenGLPaintDevicePrivateD0Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN25QOpenGLPaintDevicePrivateD1Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
  _ZN25QOpenGLPaintDevicePrivateD2Ev@Qt_5_PRIVATE_API 5.6.0~beta 1
+ (arch=amd64)_ZN25QPaintDeviceWindowPrivateD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN25QPaintDeviceWindowPrivateD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN25QPaintDeviceWindowPrivateD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN25QPlatformFileDialogHelper10setOptionsERK14QSharedPointerI18QFileDialogOptionsE@Qt_5 5.0.2
  _ZN25QPlatformFileDialogHelper11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN25QPlatformFileDialogHelper11qt_metacastEPKc@Qt_5 5.0.2
@@ -3541,10 +3580,16 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN26QAccessibleTextUpdateEventD1Ev@Qt_5 5.6.0~beta
  _ZN26QAccessibleTextUpdateEventD2Ev@Qt_5 5.6.0~beta
  _ZN26QInputDeviceManagerPrivate14setDeviceCountEN19QInputDeviceManager10DeviceTypeEi@Qt_5_PRIVATE_API 5.5.0 1
+ (arch=amd64)_ZN26QInputDeviceManagerPrivateD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QInputDeviceManagerPrivateD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QInputDeviceManagerPrivateD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN26QOpenGLContextGroupPrivate10addContextEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLContextGroupPrivate13removeContextEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLContextGroupPrivate22deletePendingResourcesEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLContextGroupPrivate7cleanupEv@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN26QOpenGLContextGroupPrivateD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QOpenGLContextGroupPrivateD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QOpenGLContextGroupPrivateD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN26QOpenGLEngineShaderManager11blitProgramEv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLEngineShaderManager11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLEngineShaderManager11qt_metacastEPKc@Qt_5_PRIVATE_API 5.0.2 1
@@ -3579,6 +3624,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN26QOpenGLEngineSharedShadersD1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLEngineSharedShadersD2Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN26QOpenGLSharedResourceGuard12freeResourceEP14QOpenGLContext@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN26QOpenGLSharedResourceGuardD0Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QOpenGLSharedResourceGuardD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN26QOpenGLSharedResourceGuardD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN26QPlatformColorDialogHelper10setOptionsERK14QSharedPointerI19QColorDialogOptionsE@Qt_5 5.0.2
  _ZN26QPlatformColorDialogHelper11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN26QPlatformColorDialogHelper11qt_metacastEPKc@Qt_5 5.0.2
@@ -3662,6 +3710,9 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN27QRegularExpressionValidatorD2Ev@Qt_5 5.1.0
  _ZN28QApplicationStateChangeEventC1EN2Qt16ApplicationStateE@Qt_5 5.1.0
  _ZN28QApplicationStateChangeEventC2EN2Qt16ApplicationStateE@Qt_5 5.1.0
+ (arch=amd64)_ZN28QApplicationStateChangeEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN28QApplicationStateChangeEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN28QApplicationStateChangeEventD2Ev@Qt_5 5.6.1
  _ZN28QPlatformInputContextFactory4keysEv@Qt_5 5.0.2
  _ZN28QPlatformInputContextFactory6createERK7QString@Qt_5 5.0.2
  _ZN28QPlatformInputContextFactory6createEv@Qt_5 5.0.2
@@ -3689,27 +3740,111 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZN29QScreenOrientationChangeEventD0Ev@Qt_5 5.0.2
  _ZN29QScreenOrientationChangeEventD1Ev@Qt_5 5.0.2
  _ZN29QScreenOrientationChangeEventD2Ev@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10CloseEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10CloseEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10CloseEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10EnterEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10EnterEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10EnterEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10InputEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10InputEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10InputEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10LeaveEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10LeaveEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10LeaveEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10MouseEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10MouseEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10MouseEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10TouchEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10TouchEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10TouchEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate10WheelEventC1EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate10WheelEventC2EP7QWindowmRK7QPointFS5_6QPointS6_iN2Qt11OrientationE6QFlagsINS7_16KeyboardModifierEENS7_11ScrollPhaseENS7_16MouseEventSourceE@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10WheelEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10WheelEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate10WheelEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate11ExposeEventC1EP7QWindowRK7QRegion@Qt_5 5.0.2
  _ZN29QWindowSystemInterfacePrivate11ExposeEventC2EP7QWindowRK7QRegion@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11ExposeEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11ExposeEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11ExposeEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11TabletEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11TabletEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate11TabletEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate12GestureEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate12GestureEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate12GestureEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate12eventHandlerE@Qt_5 5.6.0~beta
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate13FileOpenEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate13FileOpenEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate13FileOpenEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate13eventAcceptedE@Qt_5 5.6.0~beta
  _ZN29QWindowSystemInterfacePrivate13eventsFlushedE@Qt_5 5.1.0
  _ZN29QWindowSystemInterfacePrivate15flushEventMutexE@Qt_5 5.1.0
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ContextMenuEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ContextMenuEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ContextMenuEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16FlushEventsEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16FlushEventsEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16FlushEventsEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ThemeChangeEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ThemeChangeEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate16ThemeChangeEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate18PlatformPanelEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate18PlatformPanelEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate18PlatformPanelEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19GeometryChangeEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19GeometryChangeEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19GeometryChangeEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19ScreenGeometryEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19ScreenGeometryEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate19ScreenGeometryEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate19toNativeTouchPointsERK5QListIN11QTouchEvent10TouchPointEEPK7QWindow@Qt_5 5.6.0~beta
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate20ActivatedWindowEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate20ActivatedWindowEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate20ActivatedWindowEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate20getWindowSystemEventEv@Qt_5 5.0.2
  _ZN29QWindowSystemInterfacePrivate21fromNativeTouchPointsERK5QListIN22QWindowSystemInterface10TouchPointEEPK7QWindowPN6QEvent4TypeE@Qt_5 5.6.0~beta
  _ZN29QWindowSystemInterfacePrivate21peekWindowSystemEventENS_9EventTypeE@Qt_5 5.0.2
  _ZN29QWindowSystemInterfacePrivate21postWindowSystemEventEPNS_17WindowSystemEventE@Qt_5 5.6.0~beta
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenOrientationEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenOrientationEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenOrientationEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenRefreshRateEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenRefreshRateEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate22ScreenRefreshRateEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate22windowSystemEventQueueE@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate23WindowStateChangedEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate23WindowStateChangedEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate23WindowStateChangedEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate23handleWindowSystemEventEPNS_17WindowSystemEventE@Qt_5 5.0.2
  _ZN29QWindowSystemInterfacePrivate23removeWindowSystemEventEPNS_17WindowSystemEventE@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate24WindowScreenChangedEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate24WindowScreenChangedEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate24WindowScreenChangedEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate24windowSystemEventsQueuedEv@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletEnterProximityEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletEnterProximityEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletEnterProximityEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletLeaveProximityEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletLeaveProximityEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate25TabletLeaveProximityEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate28ApplicationStateChangedEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate28ApplicationStateChangedEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate28ApplicationStateChangedEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate29ScreenLogicalDotsPerInchEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate29ScreenLogicalDotsPerInchEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate29ScreenLogicalDotsPerInchEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate29synchronousWindowSystemEventsE@Qt_5 5.6.0~beta
  _ZN29QWindowSystemInterfacePrivate30removeWindowSystemEventhandlerEP25QWindowSystemEventHandler@Qt_5 5.6.0~beta
  _ZN29QWindowSystemInterfacePrivate31installWindowSystemEventHandlerEP25QWindowSystemEventHandler@Qt_5 5.6.0~beta
  _ZN29QWindowSystemInterfacePrivate32getNonUserInputWindowSystemEventEv@Qt_5 5.0.2
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate8KeyEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate8KeyEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate8KeyEventD2Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate9UserEventD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate9UserEventD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN29QWindowSystemInterfacePrivate9UserEventD2Ev@Qt_5 5.6.1
  _ZN29QWindowSystemInterfacePrivate9eventTimeE@Qt_5 5.0.2
  _ZN2Qt12codecForHtmlERK10QByteArray@Qt_5 5.0.2
  _ZN2Qt15mightBeRichTextERK7QString@Qt_5 5.0.2
@@ -7422,6 +7557,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  _ZTVN11QAccessible18ActivationObserverE@Qt_5 5.6.0~beta
  _ZTVN29QWindowSystemInterfacePrivate10CloseEventE@Qt_5 5.0.2
  _ZTVN29QWindowSystemInterfacePrivate10EnterEventE@Qt_5 5.0.2
+ (arch=amd64)_ZTVN29QWindowSystemInterfacePrivate10InputEventE@Qt_5 5.6.1
  _ZTVN29QWindowSystemInterfacePrivate10LeaveEventE@Qt_5 5.0.2
  _ZTVN29QWindowSystemInterfacePrivate10MouseEventE@Qt_5 5.0.2
  _ZTVN29QWindowSystemInterfacePrivate10TouchEventE@Qt_5 5.0.2
@@ -7558,6 +7694,7 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  (c++)"non-virtual thunk to QOpenGLWindow::~QOpenGLWindow()@Qt_5" 5.5.0
  (c++)"non-virtual thunk to QPaintDeviceWindow::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.4.0
  (c++)"non-virtual thunk to QPaintDeviceWindow::paintEngine() const@Qt_5" 5.4.0
+ (c++|arch=amd64)"non-virtual thunk to QPaintDeviceWindow::~QPaintDeviceWindow()@Qt_5" 5.6.1
  (c++)"non-virtual thunk to QPdfWriter::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QPdfWriter::newPage()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QPdfWriter::paintEngine() const@Qt_5" 5.0.2
@@ -7567,8 +7704,11 @@ libQt5Gui.so.5 libqt5gui5 #MINVER#
  (c++)"non-virtual thunk to QPdfWriter::~QPdfWriter()@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QRasterWindow::metric(QPaintDevice::PaintDeviceMetric) const@Qt_5" 5.4.0
  (c++)"non-virtual thunk to QRasterWindow::redirected(QPoint*) const@Qt_5" 5.4.0
+ (c++|arch=amd64)"non-virtual thunk to QRasterWindow::~QRasterWindow()@Qt_5" 5.6.1
+ (c++|arch=amd64)"non-virtual thunk to QSimpleDrag::~QSimpleDrag()@Qt_5_PRIVATE_API" 5.6.1
  (c++)"non-virtual thunk to QTextImageHandler::drawObject(QPainter*, QRectF const&, QTextDocument*, int, QTextFormat const&)@Qt_5_PRIVATE_API" 5.0.2 1
  (c++)"non-virtual thunk to QTextImageHandler::intrinsicSize(QTextDocument*, int, QTextFormat const&)@Qt_5_PRIVATE_API" 5.0.2 1
+ (c++|arch=amd64)"non-virtual thunk to QTextImageHandler::~QTextImageHandler()@Qt_5_PRIVATE_API" 5.6.1
  (c++)"non-virtual thunk to QWindow::format() const@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QWindow::surfaceHandle() const@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QWindow::surfaceType() const@Qt_5" 5.0.2

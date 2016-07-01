@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.6.0~beta amd64
+# SymbolsHelper-Confirmed: 5.6.1 amd64
 libQt5Xml.so.5 libqt5xml5 #MINVER#
 | libqt5xml5 #MINVER#, qtbase-abi-5-6-1
 * Build-Depends-Package: qtbase5-dev
@@ -465,11 +465,18 @@ libQt5Xml.so.5 libqt5xml5 #MINVER#
  _ZTS18QXmlDefaultHandler@Qt_5 5.0.2
  _ZTS18QXmlEntityResolver@Qt_5 5.0.2
  _ZTS18QXmlLexicalHandler@Qt_5 5.0.2
+ _ZTV10QXmlReader@Qt_5 5.6.1
  _ZTV11QXmlLocator@Qt_5 5.0.2
  _ZTV14QXmlAttributes@Qt_5 5.0.2
+ _ZTV14QXmlDTDHandler@Qt_5 5.6.1
+ _ZTV15QXmlDeclHandler@Qt_5 5.6.1
  _ZTV15QXmlInputSource@Qt_5 5.0.2
+ _ZTV16QXmlErrorHandler@Qt_5 5.6.1
  _ZTV16QXmlSimpleReader@Qt_5 5.0.2
+ _ZTV18QXmlContentHandler@Qt_5 5.6.1
  _ZTV18QXmlDefaultHandler@Qt_5 5.0.2
+ _ZTV18QXmlEntityResolver@Qt_5 5.6.1
+ _ZTV18QXmlLexicalHandler@Qt_5 5.6.1
  _ZlsR11QTextStreamRK8QDomNode@Qt_5 5.0.2
  (c++)"non-virtual thunk to QXmlDefaultHandler::attributeDecl(QString const&, QString const&, QString const&, QString const&, QString const&)@Qt_5" 5.0.2
  (c++)"non-virtual thunk to QXmlDefaultHandler::comment(QString const&)@Qt_5" 5.0.2

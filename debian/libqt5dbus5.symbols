@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.6.1 alpha armel armhf hurd-i386 i386 kfreebsd-i386 mips mipsel powerpc powerpcspe ppc64
+# SymbolsHelper-Confirmed: 5.6.1 alpha amd64 armel armhf hurd-i386 i386 kfreebsd-i386 mips mipsel powerpc powerpcspe ppc64
 libQt5DBus.so.5 libqt5dbus5 #MINVER#
 | libqt5dbus5 #MINVER#, qtbase-abi-5-6-1
 * Build-Depends-Package: qtbase5-dev
@@ -17,7 +17,7 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _Z22qDBusBindToApplicationv@Qt_5 5.0.2
  _Z24qDBusParametersForMethodRK5QListI10QByteArrayER7QVectorIiER7QString@Qt_5 5.2.0~alpha1
  _Z26qDBusGenerateMetaObjectXml7QStringPK11QMetaObjectS2_i@Qt_5 5.0.2
- _ZN10QByteArray7reserveEi@Qt_5 5.6.0~beta
+ (optional=internal|arch=!amd64)_ZN10QByteArray7reserveEi@Qt_5 5.6.1
  _ZN10QDBusError11errorStringENS_9ErrorTypeE@Qt_5 5.0.2
  _ZN10QDBusErrorC1ENS_9ErrorTypeERK7QString@Qt_5 5.0.2
  _ZN10QDBusErrorC1EPK9DBusError@Qt_5 5.0.2
@@ -156,6 +156,8 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN18QDBusIntrospection11parseObjectERK7QStringS2_S2_@Qt_5_PRIVATE_API 5.0.2 1
  _ZN18QDBusIntrospection14parseInterfaceERK7QString@Qt_5_PRIVATE_API 5.0.2 1
  _ZN18QDBusIntrospection15parseInterfacesERK7QString@Qt_5_PRIVATE_API 5.0.2 1
+ (arch=amd64)_ZN18QDBusIntrospection9InterfaceD1Ev@Qt_5_PRIVATE_API 5.6.1
+ (arch=amd64)_ZN18QDBusIntrospection9InterfaceD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN18QDBusVirtualObject11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN18QDBusVirtualObject11qt_metacastEPKc@Qt_5 5.0.2
  _ZN18QDBusVirtualObject16staticMetaObjectE@Qt_5 5.0.2
@@ -265,6 +267,9 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZN26QDBusAbstractInterfaceBase11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN26QDBusAbstractInterfaceBaseC1ER29QDBusAbstractInterfacePrivateP7QObject@Qt_5 5.0.2
  _ZN26QDBusAbstractInterfaceBaseC2ER29QDBusAbstractInterfacePrivateP7QObject@Qt_5 5.0.2
+ (arch=amd64)_ZN26QDBusAbstractInterfaceBaseD0Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN26QDBusAbstractInterfaceBaseD1Ev@Qt_5 5.6.1
+ (arch=amd64)_ZN26QDBusAbstractInterfaceBaseD2Ev@Qt_5 5.6.1
  _ZN9QDBusUtil14isValidBusNameERK7QString@Qt_5 5.0.2
  _ZN9QDBusUtil16argumentToStringERK8QVariant@Qt_5 5.0.2
  _ZN9QDBusUtil16isValidBasicTypeEi@Qt_5 5.0.2
@@ -386,7 +391,7 @@ libQt5DBus.so.5 libqt5dbus5 #MINVER#
  _ZNK24QDBusConnectionInterface12serviceOwnerERK7QString@Qt_5 5.0.2
  _ZNK24QDBusConnectionInterface19isServiceRegisteredERK7QString@Qt_5 5.0.2
  _ZNK24QDBusConnectionInterface22registeredServiceNamesEv@Qt_5 5.0.2
- (optional=templinst|arch=!alpha !ppc64)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5 5.6.1
+ (optional=templinst|arch=!alpha !amd64 !ppc64)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Qt_5 5.6.1
  _ZTI11QDBusServer@Qt_5 5.0.2
  _ZTI14QDBusInterface@Qt_5 5.0.2
  _ZTI16QDBusPendingCall@Qt_5 5.0.2

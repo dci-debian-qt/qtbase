@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.6.0~beta amd64
+# SymbolsHelper-Confirmed: 5.6.1 amd64
 libQt5OpenGL.so.5 libqt5opengl5 #MINVER#
 | libqt5opengl5 #MINVER#, qtbase-abi-5-6-1
 * Build-Depends-Package: qtbase5-dev
@@ -96,6 +96,9 @@ libQt5OpenGL.so.5 libqt5opengl5 #MINVER#
  _ZN14QGLSignalProxy16staticMetaObjectE@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QGLSignalProxy21aboutToDestroyContextEPK10QGLContext@Qt_5_PRIVATE_API 5.0.2 1
  _ZN14QGLSignalProxy8instanceEv@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN14QGLSignalProxyD0Ev@Qt_5_PRIVATE_API 5.6.1
+ _ZN14QGLSignalProxyD1Ev@Qt_5_PRIVATE_API 5.6.1
+ _ZN14QGLSignalProxyD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN16QGLShaderProgram11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.0.2
  _ZN16QGLShaderProgram11qt_metacastEPKc@Qt_5 5.0.2
  _ZN16QGLShaderProgram12removeShaderEP9QGLShader@Qt_5 5.0.2
@@ -369,6 +372,9 @@ libQt5OpenGL.so.5 libqt5opengl5 #MINVER#
  _ZN22QGLWidgetGLPaintDevice9setWidgetEP9QGLWidget@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGLWidgetGLPaintDeviceC1Ev@Qt_5_PRIVATE_API 5.0.2 1
  _ZN22QGLWidgetGLPaintDeviceC2Ev@Qt_5_PRIVATE_API 5.0.2 1
+ _ZN22QGLWidgetGLPaintDeviceD0Ev@Qt_5_PRIVATE_API 5.6.1
+ _ZN22QGLWidgetGLPaintDeviceD1Ev@Qt_5_PRIVATE_API 5.6.1
+ _ZN22QGLWidgetGLPaintDeviceD2Ev@Qt_5_PRIVATE_API 5.6.1
  _ZN26QGLFramebufferObjectFormat10setSamplesEi@Qt_5 5.0.2
  _ZN26QGLFramebufferObjectFormat13setAttachmentEN20QGLFramebufferObject10AttachmentE@Qt_5 5.0.2
  _ZN26QGLFramebufferObjectFormat16setTextureTargetEj@Qt_5 5.0.2
