@@ -1,10 +1,9 @@
-qtbase-opensource-src (5.6.1+dfsg-3~bpo8+1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.1+dfsg-3~bpo8+1) jessie-backports; urgency=medium
 
-  [ Lisandro Damián Nicanor Pérez Meyer ]
   * Prepare a Jessie backport.
   * Update symbols files with current build log.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 28 Jun 2016 20:13:33 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 07 Jul 2016 12:46:40 -0300
 
 qtbase-opensource-src (5.6.1+dfsg-3) unstable; urgency=medium
 
