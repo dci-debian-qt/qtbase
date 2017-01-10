@@ -14,6 +14,8 @@ qtbase-opensource-src (5.6.2+dfsg-0ubuntu1) UNRELEASED; urgency=medium
     - Fix-the-GCC-version-supporting-Wsuggest-override.patch
     - QtWidgets-Send-show-hide-event-to-children-on-restor.patch
   * Skip a few widgets related tests having failures.
+  * debian/patches/QSettings-Avoid-unneeded-sync-on-destruction.patch:
+    - Backport from 5.8 (LP: #1642605)
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Thu, 13 Oct 2016 13:22:14 +0000
 

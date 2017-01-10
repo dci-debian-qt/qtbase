@@ -17,6 +17,7 @@ Merge-the-QDBusMetaType-s-custom-information-to-QDBu.patch
 Fix-some-QtDBus-crashes-during-application-destructi.patch
 Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
+QSettings-Avoid-unneeded-sync-on-destruction.patch
 
 # Debian specific.
 gnukfreebsd.diff
