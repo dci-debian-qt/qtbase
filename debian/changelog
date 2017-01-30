@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.6.2+dfsg-0ubuntu1~~xenialoverlay2~1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.6.2+dfsg-0ubuntu1~~xenialoverlay2~1) xenial; urgency=medium
 
   * debian/patches/Add-support-for-selecting-the-printer-plugin-via-the.patch:
     - Backport from Qt 5.9.
