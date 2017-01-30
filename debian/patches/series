@@ -18,6 +18,7 @@ Fix-some-QtDBus-crashes-during-application-destructi.patch
 Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
 QSettings-Avoid-unneeded-sync-on-destruction.patch
+Add-support-for-selecting-the-printer-plugin-via-the.patch
 
 # Debian specific.
 gnukfreebsd.diff
