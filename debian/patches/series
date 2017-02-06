@@ -13,3 +13,4 @@ remove_privacy_breachs.diff
 link_fbclient.diff
 gnukfreebsd_cloexec.diff
 armv4.diff
+needsfboreadbackworkaround.patch
