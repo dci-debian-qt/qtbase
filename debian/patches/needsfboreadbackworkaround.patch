@@ -48,3 +48,4 @@ index 9ab5cd3..f0fb1fe 100644
      QGLFormat glFormat;
      QGLFormat reqFormat;
      GLuint fbo;
+
