@@ -1,26 +1,17 @@
-From 02d02743ab633e379271fdcdebc574146f44466e Mon Sep 17 00:00:00 2001
-From: root <bhush94@gmail.com>
-Date: Mon, 6 Feb 2017 18:36:09 +0000
-Subject: [PATCH] FBO workaround for mobile with envvar for testing
-
----
- src/opengl/qgl.cpp | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
-diff --git a/src/opengl/qgl.cpp b/src/opengl/qgl.cpp
-index 6b0501e..a4420b1 100644
---- a/src/opengl/qgl.cpp
-+++ b/src/opengl/qgl.cpp
-@@ -3581,7 +3581,8 @@ void QGLContext::makeCurrent()
-         if (!d->workaroundsCached) {
-             d->workaroundsCached = true;
-             const char *renderer = reinterpret_cast<const char *>(d->guiGlContext->functions()->glGetString(GL_RENDERER));
--            if (renderer && strstr(renderer, "Mali")) {
-+            if (qEnvironmentVariableIsSet("QT_GLYPH_CACHE_WORKAROUND")) {
-+		qDebug() << "BSHAH: WE ARE ENABLING THE WORKAROUND";
-                 d->workaround_brokenFBOReadBack = true;
-             }
-         }
--- 
-2.7.4
+diff --git a/src/gui/kernel/qopenglcontext.cpp b/src/gui/kernel/qopenglcontext.cpp
+index 8aea593..a1b7586 100644
+--- a/src/gui/kernel/qopenglcontext.cpp
++++ b/src/gui/kernel/qopenglcontext.cpp
+@@ -979,6 +979,11 @@ bool QOpenGLContext::makeCurrent(QSurface *surface)
+         return false;
+     }
+ 
++    QByteArray env = qgetenv("QT_ENABLE_GLYPH_CACHE_WORKAROUND");
++    if (env == "1" || env == "true") {
++        d->workaround_brokenFBOReadBack = true;
++    }
++
+     QOpenGLContext *previous = QOpenGLContextPrivate::setCurrentContext(this);
+ 
+     if (d->platformGLContext->makeCurrent(surface->surfaceHandle())) {
 
