@@ -19,6 +19,8 @@ Make-the-bearer-QFactoryLoader-a-member-variable-not.patch
 Stop-unloading-plugins-in-QPluginLoader-and-QFactory.patch
 QSettings-Avoid-unneeded-sync-on-destruction.patch
 Add-support-for-selecting-the-printer-plugin-via-the.patch
+qdbus-tray-icon-always-save-icon-in-unity.patch
+qdbus-tray-icon-use-runtimedir.patch
 
 # Debian specific.
 gnukfreebsd.diff
