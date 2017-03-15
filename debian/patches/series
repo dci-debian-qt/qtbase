@@ -21,6 +21,8 @@ QSettings-Avoid-unneeded-sync-on-destruction.patch
 Add-support-for-selecting-the-printer-plugin-via-the.patch
 qdbus-tray-icon-always-save-icon-in-unity.patch
 qdbus-tray-icon-use-runtimedir.patch
+Add-qAsConst.patch
+QPlatformTheme-added-EditorFont.patch
 
 # Debian specific.
 gnukfreebsd.diff
@@ -36,3 +38,4 @@ enable-tests.patch
 skip-largefile-test-s390x.patch
 qnam-ubuntu-fix6.patch
 disable_overlay_scrollbars.diff
+enable_c++11.patch
