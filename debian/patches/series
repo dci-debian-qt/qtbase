@@ -23,6 +23,7 @@ qdbus-tray-icon-always-save-icon-in-unity.patch
 qdbus-tray-icon-use-runtimedir.patch
 Add-qAsConst.patch
 QPlatformTheme-added-EditorFont.patch
+Add-support-for-ImhAnchorRectangle.patch
 
 # Debian specific.
 gnukfreebsd.diff
