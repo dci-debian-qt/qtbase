@@ -1,0 +1,95 @@
+From 7fffc04335fa63e754655bd15ff4286837d1737b Mon Sep 17 00:00:00 2001
+From: Marco Martin <mart@kde.org>
+Date: Fri, 17 Feb 2017 11:34:40 +0100
+Subject: [PATCH] Reset d->mouseDown only if it's the menu being hidden
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+If the mouse cursor is over a menu entry with a submenu, and the
+submenu is open, quickly moving the mouse to a near menu entry and
+clicking it sometimes results in the click being eaten: this happens
+when the mouse is pressed before the submenu disappears and released
+after it disappeared: the submenu resets d->mouseDown that is a static,
+causing the mouse release event on the action we want to have no effect.
+Set d->mouseDown to 0 only when the window is hiding is the actual
+window that contains the mouseDown, otherwise is still valid.
+
+Change-Id: I2c981b9432728e9e7518c30a146c9595199f8afe
+Reviewed-by: Błażej Szczygieł <spaz16@wp.pl>
+Reviewed-by: Olivier Goffart (Woboq GmbH) <ogoffart@woboq.com>
+---
+ src/widgets/widgets/qmenu.cpp                  |  3 ++-
+ tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp | 35 ++++++++++++++++++++++++++
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+diff --git a/src/widgets/widgets/qmenu.cpp b/src/widgets/widgets/qmenu.cpp
+index bdeb46e..a06b9b4 100644
+--- a/src/widgets/widgets/qmenu.cpp
++++ b/src/widgets/widgets/qmenu.cpp
+@@ -2584,7 +2584,8 @@ void QMenu::hideEvent(QHideEvent *)
+     if (QMenuBar *mb = qobject_cast<QMenuBar*>(d->causedPopup.widget))
+         mb->d_func()->setCurrentAction(0);
+ #endif
+-    d->mouseDown = 0;
++    if (d->mouseDown == this)
++        d->mouseDown = 0;
+     d->hasHadMouse = false;
+     if (d->activeMenu)
+         d->hideMenu(d->activeMenu);
+diff --git a/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp b/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
+index b037cc2..1a06973 100644
+--- a/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
++++ b/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
+@@ -110,6 +110,8 @@ private slots:
+ #ifdef Q_OS_MAC
+     void QTBUG_37933_ampersands_data();
+     void QTBUG_37933_ampersands();
++#else
++    void click_while_dismissing_submenu();
+ #endif
+     void QTBUG_56917_wideMenuSize();
+     void QTBUG_56917_wideMenuScreenNumber();
+@@ -1134,6 +1136,39 @@ void tst_QMenu::QTBUG20403_nested_popup_on_shortcut_trigger()
+     QVERIFY(!subsub1.isVisible());
+ }
+ 
++#ifndef Q_OS_MACOS
++void tst_QMenu::click_while_dismissing_submenu()
++{
++    QMenu menu("Test Menu");
++    QAction *action = menu.addAction("action");
++    QMenu sub("&sub");
++    sub.addAction("subaction");
++    menu.addMenu(&sub);
++    centerOnScreen(&menu, QSize(120, 100));
++    menu.show();
++    QSignalSpy spy(action, SIGNAL(triggered()));
++    QSignalSpy menuShownSpy(&sub, SIGNAL(aboutToShow()));
++    QSignalSpy menuHiddenSpy(&sub, SIGNAL(aboutToHide()));
++    QVERIFY(QTest::qWaitForWindowExposed(&menu));
++    //go over the submenu, press, move and release over the top level action
++    //this opens the submenu, move two times to emulate user interaction (d->motions > 0 in QMenu)
++    QTest::mouseMove(&menu, menu.rect().center() + QPoint(0,2));
++    QTest::mouseMove(&menu, menu.rect().center() + QPoint(1,3), 60);
++    QVERIFY(menuShownSpy.wait());
++    QVERIFY(sub.isVisible());
++    QVERIFY(QTest::qWaitForWindowExposed(&sub));
++    //press over the submenu entry
++    QTest::mousePress(&menu, Qt::LeftButton, 0, menu.rect().center() + QPoint(0,2), 300);
++    //move over the main action
++    QTest::mouseMove(&menu, menu.rect().center() - QPoint(0,2));
++    QVERIFY(menuHiddenSpy.wait());
++    //the submenu must have been hidden for the bug to be triggered
++    QVERIFY(!sub.isVisible());
++    QTest::mouseRelease(&menu, Qt::LeftButton, 0, menu.rect().center() - QPoint(0,2), 300);
++    QCOMPARE(spy.count(), 1);
++}
++#endif
++
+ class MyWidget : public QWidget
+ {
+ public:
+-- 
+2.7.4
+
