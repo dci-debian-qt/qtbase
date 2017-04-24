@@ -23,11 +23,11 @@ Reviewed-by: Olivier Goffart (Woboq GmbH) <ogoffart@woboq.com>
  tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp | 35 ++++++++++++++++++++++++++
  2 files changed, 37 insertions(+), 1 deletion(-)
 
-diff --git a/src/widgets/widgets/qmenu.cpp b/src/widgets/widgets/qmenu.cpp
-index bdeb46e..a06b9b4 100644
---- a/src/widgets/widgets/qmenu.cpp
-+++ b/src/widgets/widgets/qmenu.cpp
-@@ -2584,7 +2584,8 @@ void QMenu::hideEvent(QHideEvent *)
+Index: qtbase-opensource-src-5.7.1/src/widgets/widgets/qmenu.cpp
+===================================================================
+--- qtbase-opensource-src-5.7.1.orig/src/widgets/widgets/qmenu.cpp
++++ qtbase-opensource-src-5.7.1/src/widgets/widgets/qmenu.cpp
+@@ -2505,7 +2505,8 @@ void QMenu::hideEvent(QHideEvent *)
      if (QMenuBar *mb = qobject_cast<QMenuBar*>(d->causedPopup.widget))
          mb->d_func()->setCurrentAction(0);
  #endif
@@ -37,20 +37,20 @@ index bdeb46e..a06b9b4 100644
      d->hasHadMouse = false;
      if (d->activeMenu)
          d->hideMenu(d->activeMenu);
-diff --git a/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp b/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
-index b037cc2..1a06973 100644
---- a/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
-+++ b/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
-@@ -110,6 +110,8 @@ private slots:
+Index: qtbase-opensource-src-5.7.1/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
+===================================================================
+--- qtbase-opensource-src-5.7.1.orig/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
++++ qtbase-opensource-src-5.7.1/tests/auto/widgets/widgets/qmenu/tst_qmenu.cpp
+@@ -113,6 +113,8 @@ private slots:
  #ifdef Q_OS_MAC
      void QTBUG_37933_ampersands_data();
      void QTBUG_37933_ampersands();
 +#else
 +    void click_while_dismissing_submenu();
  #endif
-     void QTBUG_56917_wideMenuSize();
-     void QTBUG_56917_wideMenuScreenNumber();
-@@ -1134,6 +1136,39 @@ void tst_QMenu::QTBUG20403_nested_popup_on_shortcut_trigger()
+ protected slots:
+     void onActivated(QAction*);
+@@ -1143,6 +1145,39 @@ void tst_QMenu::QTBUG20403_nested_popup_
      QVERIFY(!subsub1.isVisible());
  }
  
@@ -90,6 +90,3 @@ index b037cc2..1a06973 100644
  class MyWidget : public QWidget
  {
  public:
--- 
-2.7.4
-
