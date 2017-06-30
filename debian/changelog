@@ -1,8 +1,26 @@
-qtbase-opensource-src (5.9.0-0neon) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.0+dfsg-2) UNRELEASED; urgency=medium
 
-  * New release
+  [ Dmitry Shachnev ]
+  * Remove unused gstreamer build-dependencies, thanks to Alexander Volkov.
+    See upstream commit 60e5a1c8effd4099.
+  * Drop libqt5gui5 recommendation on mesa-utils, thanks to Alexander Volkov.
+    It was needed only for 90qt5-opengl script, which we no longer ship.
 
- -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 01 Jun 2017 15:58:10 +0100
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 08 Jun 2017 13:48:28 +0300
+
+qtbase-opensource-src (5.9.0+dfsg-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Simon Quigley ]
+  * New upstream final release.
+  * Modify debian/watch to automatically pick up new development *and* final
+    releases.
+
+  [ Dmitry Shachnev ]
+  * Update symbols files from the current build logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 06 Jun 2017 14:49:38 -0500
 
 qtbase-opensource-src (5.9.0~beta.3+dfsg-1) experimental; urgency=medium
 
