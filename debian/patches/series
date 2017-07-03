@@ -8,4 +8,3 @@ remove_privacy_breachs.diff
 link_fbclient.diff
 gnukfreebsd_cloexec.diff
 armv4.diff
-qt_xcb_dont_destroy_foreign_windows.diff
