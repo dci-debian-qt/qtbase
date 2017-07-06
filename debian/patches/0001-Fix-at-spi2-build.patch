@@ -1,0 +1,26 @@
+From 54325809cc8e5e6939649f6c6f43fe13de0e0470 Mon Sep 17 00:00:00 2001
+From: Fabian Vogt <fabian@ritter-vogt.de>
+Date: Sat, 1 Jul 2017 13:52:32 +0200
+Subject: [PATCH] Fix at-spi2 build
+
+- Condition is wrong, always resulting in "Note: Disabling Linux Accessibility Bridge: D-Bus is missing."
+---
+ src/gui/configure.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/gui/configure.json b/src/gui/configure.json
+index 2fb03a452a..957316a51c 100644
+--- a/src/gui/configure.json
++++ b/src/gui/configure.json
+@@ -434,7 +434,7 @@
+     "features": {
+         "accessibility-atspi-bridge": {
+             "label": "ATSPI Bridge",
+-            "condition": "features.accessibility && features.xcb && features.dbus && config.atspi",
++            "condition": "features.accessibility && features.xcb && features.dbus && libs.atspi",
+             "output": [ "privateFeature", "feature" ]
+         },
+         "angle": {
+-- 
+2.13.0
+
