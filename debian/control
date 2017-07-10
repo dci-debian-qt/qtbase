@@ -25,8 +25,6 @@ Build-Depends: debhelper (>= 9.20160114~),
                libgles2-mesa-dev | libgles2-dev,
                libglib2.0-dev,
                libglu1-mesa-dev | libglu-dev,
-               libgstreamer-plugins-base1.0-dev,
-               libgstreamer1.0-dev,
                libgtk-3-dev,
                libharfbuzz-dev,
                libicu-dev,
@@ -68,7 +66,7 @@ Build-Depends: debhelper (>= 9.20160114~),
                zlib1g-dev
 Build-Depends-Indep: libqt5sql5-sqlite (>= 5.8.0+dfsg~) <!nodoc>,
                      qttools5-dev-tools (>= 5.8.0~) <!nodoc>
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtbase.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtbase.git
@@ -93,7 +91,7 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: fontconfig, ${misc:Depends}, ${shlibs:Depends}
-Recommends: libqt5svg5, mesa-utils, qt5-gtk-platformtheme
+Recommends: libqt5svg5, qt5-gtk-platformtheme
 Breaks: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
         libqt5xcbqpa5 (<< 5.6.0~beta+dfsg-5~)
 Replaces: libqt5egldeviceintegration5 (<< 5.6.0~beta+dfsg-5~),
