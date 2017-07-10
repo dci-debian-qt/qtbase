@@ -1,0 +1,1 @@
+rm_conffile /etc/xdg/QtProject/qtlogging.ini 5.9.0-0neon+16.04+xenial+build19

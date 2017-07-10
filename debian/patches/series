@@ -1,13 +1,7 @@
-# Backported from upstream
-qsettings_simplify_logic.diff
-qsettings_XDG_CONFIG_DIRS.diff
-fix_build_on_x32.diff
-gcc_6.3.diff
-fix_accessibility_crash.diff
-0001-Reset-d-mouseDown-only-if-it-s-the-menu-being-hidden.patch
+# Forwarded upstream.
+fix_atspi_condition.diff
 
 # Debian specific.
-no_dbus_dependency.diff
 gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
