@@ -1,6 +1,3 @@
-# Forwarded upstream.
-fix_atspi_condition.diff
-
 # Debian specific.
 gnukfreebsd.diff
 no_htmlinfo_example.diff
