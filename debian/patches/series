@@ -1,6 +1,10 @@
+# Backported from upstream.
+qglxconvenience_nullptr.diff
+
 # Debian specific.
 gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
 armv4.diff
+nonlinux_utime.diff
