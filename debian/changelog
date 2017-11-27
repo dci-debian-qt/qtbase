@@ -1,8 +1,127 @@
-qtbase-opensource-src (5.9.2+dfsg-0neon) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.9.2+dfsg-3) UNRELEASED; urgency=medium
 
-  * New release
+  [ Dmitry Shachnev ]
+  * Merge 5.9.1+dfsg-12 upload from unstable.
+  * Move all Qt binaries to a non-multiarch location, /usr/lib/qt5/bin/, for
+    improved cross-build support. Provide compatibility symlinks for the old
+    location.
 
- -- Jonathan Riddell <jr@jriddell.org>  Fri, 10 Nov 2017 11:41:39 +0000
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 19 Oct 2017 16:23:43 +0300
+
+qtbase-opensource-src (5.9.2+dfsg-2) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Bump qtbase-abi to 5-9-2. We can't warrant that we catch all ABI changes
+    (specially with private stuff) and there is still the internal version
+    check, so we need to bump it even if we do not find API/ABI changes.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 14 Oct 2017 10:23:26 +0300
+
+qtbase-opensource-src (5.9.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop fix_atspi_condition.diff, it was coming from upstream.
+  * Port gnukfreebsd_cloexec.diff to new upstream code.
+  * Stop excluding src/3rdparty/zlib/doc/rfc*.txt from the tarball,
+    these files are no longer shipped by upstream.
+  * Update symbols files from the current build log.
+  * Update debian/copyright.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 06 Oct 2017 23:10:25 +0700
+
+qtbase-opensource-src (5.9.1+dfsg-12) unstable; urgency=medium
+
+  * Use the linux-g++ mkspec on all Linux architectures. We do not need
+    the -m64 compiler flag which linux-g++-64 adds.
+  * Split qmake binary into a new binary package, qt5-qmake-bin.
+    Make the new package Multi-Arch: foreign, to make sure that a proper
+    version of qmake gets installed for cross builds (closes: #876861).
+  * Bump Standards-Version to 4.1.1, no changes needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 04 Oct 2017 11:41:29 +0700
+
+qtbase-opensource-src (5.9.1+dfsg-11) unstable; urgency=medium
+
+  * Backport upstream patch to fix crash in qglx_findConfig() function
+    (qglxconvenience_nullptr.diff, closes: #841951).
+  * Backport upstream patch to call mysql_library_end() only once when
+    using MariaDB (mariadb_library_end.diff).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 28 Sep 2017 00:03:45 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-10) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Add a maintscript to ensure that the obsolete 90qt5-opengl conffile
+    is removed on upgrade (closes: #873788).
+  * Bump Standards-Version to 4.1.0, stop using deprecated Priority: extra.
+  * Update symbols files from kfreebsd-i386 log.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * debian/rules: include /usr/share/dpkg/architecture.mk instead of defining
+    DEB_HOST_* variables. Thanks Helmut Grohne!
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 23 Sep 2017 17:57:53 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-9) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Remove missing symbol in libqt5network5.symbols. I clearly missed it while
+    editing them.
+
+  [ Dmitry Shachnev ]
+  * Stop using the gold linker on all architectures, because of bug #852035.
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 20 Aug 2017 19:13:27 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-8) unstable; urgency=medium
+
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Wed, 16 Aug 2017 09:31:28 -0300
+
+qtbase-opensource-src (5.9.1+dfsg-7) unstable; urgency=medium
+
+  * Brown paper bag upload to unstable. Actually start the transition :-)
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 15 Aug 2017 20:50:02 -0300
+
+qtbase-opensource-src (5.9.1+dfsg-6) experimental; urgency=medium
+
+  * Update symbols files for GCC 7 symbols changes.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 15 Aug 2017 20:45:42 -0300
+
+qtbase-opensource-src (5.9.1+dfsg-5) experimental; urgency=medium
+
+  * Build with large file support by adding LFS_CFLAGS to build flags.
+  * Update symbols files from buildds’ logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 07 Jul 2017 18:26:11 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-4) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Revert dropping the workaround to not use gold on i386.
+    See https://bugs.debian.org/842304#33.
+
+  [ Pino Toscano ]
+  * Do not install the QtKmsSupport stuff on Hurd, since it is not built
+    there.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 05 Jul 2017 18:41:19 +0300
+
+qtbase-opensource-src (5.9.1+dfsg-3) experimental; urgency=medium
+
+  * Update headers of debian/patches/fix_atspi_condition.diff.
+  * Add a patch to use UTIME_NOW only if it is defined, to fix build on
+    kFreeBSD and Hurd (nonlinux_utime.diff).
+  * Update debian/libqt5gui5.symbols from buildds’ logs.
+  * Drop the workaround to not use gold on i386, bug #842304 should be
+    fixed now.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 04 Jul 2017 14:18:26 +0300
 
 qtbase-opensource-src (5.9.1+dfsg-2) experimental; urgency=medium
 
@@ -129,6 +248,12 @@ qtbase-opensource-src (5.8.0+dfsg-1) experimental; urgency=medium
       smaller libraries.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Fri, 10 Feb 2017 10:20:43 +0300
+
+qtbase-opensource-src (5.7.1+dfsg-4) unstable; urgency=medium
+
+  * Backport patch to remove OpenGL ES 2.0 direct calls (Closes: #866506).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 02 Jul 2017 20:07:11 -0300
 
 qtbase-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
 
