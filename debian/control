@@ -64,8 +64,8 @@ Build-Depends: debhelper (>= 9.20160114~),
                publicsuffix,
                unixodbc-dev,
                zlib1g-dev
-Build-Depends-Indep: libqt5sql5-sqlite (>= 5.8.0+dfsg~) <!nodoc>,
-                     qttools5-dev-tools (>= 5.8.0~) <!nodoc>
+Build-Depends-Indep: libqt5sql5-sqlite (>= 5.9.3+dfsg) <!nodoc>,
+                     qttools5-dev-tools (>= 5.9.3) <!nodoc>
 Standards-Version: 4.1.1
 Homepage: http://qt-project.org/
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtbase.git
@@ -476,3 +476,4 @@ Description: Qt 5 base HTML documentation
  .
  This package contains the HTML documentation for the Qt 5 base
  libraries.
+
