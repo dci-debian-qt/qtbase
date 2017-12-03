@@ -1,5 +1,4 @@
 # Backported from upstream.
-eglplatform_swapbuffers.patch
 fix_atspi_condition.diff
 
 # Debian specific.
