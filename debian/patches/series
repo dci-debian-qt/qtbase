@@ -6,3 +6,6 @@ link_fbclient.diff
 armv4.diff
 0001-FBO-workaround-for-mobile-with-envvar-for-testing.patch
 nonlinux_utime.diff
+
+# neon specific patch from d_ed
+neon_send_net_wm_sync.patch
