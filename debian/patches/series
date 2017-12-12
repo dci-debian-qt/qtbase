@@ -1,7 +1,6 @@
-# Backported from upstream.
 0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.diff
 fix_atspi_condition.diff
-
+qglxconvenience_nullptr.diff
 # Debian specific.
 gnukfreebsd.diff
 no_htmlinfo_example.diff
