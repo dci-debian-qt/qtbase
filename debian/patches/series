@@ -5,3 +5,6 @@ remove_privacy_breachs.diff
 link_fbclient.diff
 armv4.diff
 nonlinux_utime.diff
+
+# neon specific patch from d_ed
+neon_send_net_wm_sync.patch
