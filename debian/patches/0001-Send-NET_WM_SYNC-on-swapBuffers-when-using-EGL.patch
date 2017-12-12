@@ -1,23 +1,21 @@
-From ecbff73232d765420f12974016b52d9ec713acc6 Mon Sep 17 00:00:00 2001
+From e3c1eaa321f89ad5696d0c6fd012546832382353 Mon Sep 17 00:00:00 2001
 From: David Edmundson <davidedmundson@kde.org>
-Date: Sun, 3 Dec 2017 10:25:29 +0100
+Date: Tue, 12 Dec 2017 11:45:56 +0000
 Subject: [PATCH] Send NET_WM_SYNC on swapBuffers when using EGL
 
 If a user is using EGL on X, we need to reply to sync requests in the
 same way that we do in the GLX backend.
-
-Change-Id: I950de284685dc0ead896688c434828ab1b9c673f
 ---
  .../platforms/xcb/gl_integrations/xcb_egl/qxcbeglcontext.h        | 8 ++++++++
  1 file changed, 8 insertions(+)
 
 diff --git a/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglcontext.h b/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglcontext.h
-index fe50afa62a..c3ce8d8745 100644
+index 48e774bbb2..15e874de4c 100644
 --- a/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglcontext.h
 +++ b/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglcontext.h
-@@ -59,6 +59,14 @@ public:
-     void swapBuffers(QPlatformSurface *surface)
+@@ -63,6 +63,14 @@ public:
      {
+         Q_XCB_NOOP(m_connection);
          QEGLPlatformContext::swapBuffers(surface);
 +        if (surface->surface()->surfaceClass() == QSurface::Window) {
 +            QXcbWindow *platformWindow = static_cast<QXcbWindow *>(surface);
@@ -27,9 +25,9 @@ index fe50afa62a..c3ce8d8745 100644
 +            if (platformWindow->needsSync())
 +                platformWindow->postSyncWindowRequest();
 +        }
+         Q_XCB_NOOP(m_connection);
      }
  
-     bool makeCurrent(QPlatformSurface *surface)
 -- 
 2.15.0
 
