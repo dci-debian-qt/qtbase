@@ -32,3 +32,4 @@ index fe50afa62a..c3ce8d8745 100644
      bool makeCurrent(QPlatformSurface *surface)
 -- 
 2.15.0
+
