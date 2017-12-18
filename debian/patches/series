@@ -9,3 +9,4 @@ nonlinux_utime.diff
 
 # neon specific patch from d_ed
 0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.patch
+avoid-bad-pixeldeltas.diff
