@@ -1,4 +1,4 @@
-# Backported from upstream.
+0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.diff
 qglxconvenience_nullptr.diff
 postgresql_10.diff
 qdnslookup_crash.diff
