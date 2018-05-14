@@ -15,3 +15,6 @@ gnukfreebsd_linker_warnings.diff
 armv4.diff
 nonlinux_utime.diff
 no_arc4random_buf.diff
+
+# Netrunner specific
+0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.diff
