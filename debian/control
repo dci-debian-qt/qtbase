@@ -6,14 +6,14 @@ Uploaders: Sune Vuorela <sune@debian.org>,
            Pino Toscano <pino@debian.org>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
            Timo Jyrinki <timo@debian.org>,
-           Dmitry Shachnev <mitya57@debian.org>
+           Dmitry Shachnev <mitya57@debian.org>,
+           Simon Quigley <tsimonq2@ubuntu.com>
 Build-Depends: debhelper (>= 10.3),
                default-libmysqlclient-dev,
                dh-exec,
                dpkg-dev (>= 1.17.14),
                firebird-dev [kfreebsd-any linux-any],
                freetds-dev,
-               gdb,
                libasound2-dev [linux-any],
                libatspi2.0-dev,
                libcups2-dev,
@@ -38,7 +38,7 @@ Build-Depends: debhelper (>= 10.3),
                libproxy-dev,
                libpulse-dev,
                libsqlite3-dev,
-               libssl1.0-dev,
+               libssl-dev,
                libudev-dev [linux-any],
                libx11-dev,
                libx11-xcb-dev,
@@ -64,18 +64,17 @@ Build-Depends: debhelper (>= 10.3),
                publicsuffix,
                unixodbc-dev,
                zlib1g-dev
-Build-Depends-Indep: libqt5sql5-sqlite (>= 5.8.0+dfsg~) <!nodoc>,
-                     qttools5-dev-tools (>= 5.9.2-2~) <!nodoc>
-Standards-Version: 4.1.3
+Build-Depends-Indep: qttools5-dev-tools (>= 5.10.1~) <!nodoc>
+Standards-Version: 4.1.4
 Homepage: http://qt-project.org/
-Vcs-Git: https://anonscm.debian.org/git/pkg-kde/qt/qtbase.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-kde/qt/qtbase.git
+Vcs-Git: https://salsa.debian.org/qt-kde-team/qt/qtbase.git
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/qt/qtbase
 
 Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-9-2
+Provides: qtbase-abi-5-10-0
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0
@@ -119,7 +118,7 @@ Package: libqt5network5
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libssl1.0.2, ${misc:Depends}, ${shlibs:Depends}
+Depends: libssl1.1, ${misc:Depends}, ${shlibs:Depends}
 Description: Qt 5 network module
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.

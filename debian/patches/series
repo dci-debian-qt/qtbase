@@ -1,19 +1,17 @@
-0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.diff
-qglxconvenience_nullptr.diff
-postgresql_10.diff
-qdnslookup_crash.diff
+# Backported from upstream.
 dead_key_symbols.diff
-http2_headers.diff
 extend_mariadb_define_check.diff
+resources_for_examples.diff
+mesa_18.diff
+fix_loading_opengl.diff
+hidpi_scale_at_192.diff
 
 # Debian specific.
 gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
-gnukfreebsd_cloexec.diff
+gnukfreebsd_linker_warnings.diff
 armv4.diff
 nonlinux_utime.diff
-
-# Not yet forwarded.
-hidpi_scale_at_192.diff
+no_arc4random_buf.diff
