@@ -1,10 +1,7 @@
 # Backported from upstream.
-dead_key_symbols.diff
-extend_mariadb_define_check.diff
-resources_for_examples.diff
-mesa_18.diff
-fix_loading_opengl.diff
-hidpi_scale_at_192.diff
+fix-selection-rendering.patch
+reference_dpi.diff
+remove_need_for_glXGetProcAddressARB.patch
 
 # Debian specific.
 gnukfreebsd.diff
@@ -15,6 +12,11 @@ gnukfreebsd_linker_warnings.diff
 armv4.diff
 nonlinux_utime.diff
 no_arc4random_buf.diff
+qdoc_default_incdirs.diff
+kfreebsd_qstrncpy.diff
+alpha_atimensec.diff
+revert_remove_our_use_of_syscall_for-statx.patch
 
 # Netrunner specific
 0001-Send-NET_WM_SYNC-on-swapBuffers-when-using-EGL.diff
+
